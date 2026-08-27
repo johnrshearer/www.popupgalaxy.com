@@ -1,0 +1,11 @@
+sidebar_es:
+  - title: ""
+    children:
+      - title: "Inicio"
+        url: "/es/"
+      - title: "Sobre Nosotros"
+        url: "/es/about/"
+      - title: "Contacto"
+        url: "/es/contact/"
+      - title: "Aplicación TruckAround 🚀"
+        url: "https://truckaround.app"

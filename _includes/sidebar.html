@@ -1,0 +1,24 @@
+<div class="sidebar sticky">
+  {% assign navigation = site.data[page.sidebar.nav] | default: site.data.navigation_en.sidebar_en %}
+  
+  {% if page.sidebar.nav == 'sidebar_es' %}
+    {% assign navigation = site.data.navigation_es.sidebar_es %}
+  {% endif %}
+
+  <nav class="nav__list">
+    {% for section in navigation %}
+      {% if section.title %}
+        <h3 class="nav__title">{{ section.title }}</h3>
+      {% endif %}
+      <ul class="nav__items">
+        {% for item in section.children %}
+          <li>
+            <a href="{{ item.url | relative_url }}" {% if item.url contains 'http' %}target="_blank" rel="noopener noreferrer"{% endif %}>
+              {{ item.title }}
+            </a>
+          </li>
+        {% endfor %}
+      </ul>
+    {% endfor %}
+  </nav>
+</div>

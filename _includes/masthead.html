@@ -1,0 +1,26 @@
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        <a class="site-title" href="{{ '/' | relative_url }}">Pop-Up Galaxy</a>
+        <!-- ul class="visible-links">
+          <li class="masthead__menu-item">
+            <a href="https://truckaround.app" target="_blank" rel="noopener">TruckAround App</a>
+          </li>
+        </ul -->
+        
+	<!-- Language Switcher Fix -->
+        <div class="language-switcher" style="float: right; margin-left: auto;">
+
+          {% comment %} Force detection of Spanish via page.lang {% endcomment %}
+          {% if page.lang == 'es' %}
+            <a href="{{ page.url | replace:'/es/','/' }}" style="font-weight: bold; text-decoration: none;">English</a> 
+          {% else %}
+            <a href="/es{{ page.url }}" style="font-weight: bold; text-decoration: none;">Español</a>
+          {% endif %}
+
+        </div>
+      </nav>
+    </div>
+  </div>
+</div>
