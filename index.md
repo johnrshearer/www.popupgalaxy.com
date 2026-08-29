@@ -17,4 +17,4 @@ sidebar:
           url: "https://truckaround.app"
 ---
 
-Welcome to Pop-Up Galaxy!
+Welcome to Pop-Up Galaxy!  Have a nice day.
